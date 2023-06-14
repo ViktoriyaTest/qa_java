@@ -1,4 +1,5 @@
-package com.example;
+import com.example.Feline;
+import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,12 +16,13 @@ public class LionManeParamTest {
         this.result = result;
         this.sex = sex;
     }
-
-    @Parameterized.Parameters(name = "Грива. Тестовые данные: {0} {1}")
-    public static Object[][] newOrderData() {
-        return new Object[][]{{true, "Самец"}, {false, "Самка"}};
+    @Parameterized.Parameters
+    public static Object[][] newOrderData(){
+        return new Object[][] {
+                {true,"Самец"},
+                {false,"Самка"}
+        };
     }
-
     @Test
     public void DoesHaveManeTest() throws Exception {
 
