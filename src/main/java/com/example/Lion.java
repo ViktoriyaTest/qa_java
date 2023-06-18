@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Lion {
 
+    private final Feline feline; //поле класса Lion;
     boolean hasMane;
-    private Feline feline; //поле класса Lion;
 
     public Lion(String sex, Feline feline) throws Exception {
         this.feline = feline;
@@ -19,10 +19,7 @@ public class Lion {
         }
     }
 
-
-
-
-   public int getKittens() {
+    public int getKittens() {
 
         return feline.getKittens();
     }
