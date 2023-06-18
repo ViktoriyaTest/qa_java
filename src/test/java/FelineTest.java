@@ -33,7 +33,7 @@ public class FelineTest {
             this.actual = actual;
         }
 
-        @Parameterized.Parameters // добавили аннотацию
+        @Parameterized.Parameters //добавили аннотацию
         public static Object[][] getKittensCount() {
             return new Object[][]{
                     {10, 10},
