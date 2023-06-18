@@ -16,13 +16,15 @@ public class LionManeParamTest {
         this.result = result;
         this.sex = sex;
     }
-    @Parameterized.Parameters
-    public static Object[][] newOrderData(){
-        return new Object[][] {
-                {true,"Самец"},
-                {false,"Самка"}
+
+    @Parameterized.Parameters(name = "Грива. Тестовые данные: {0} {1}")
+    public static Object[][] newOrderData() {
+        return new Object[][]{
+                {true, "Самец"},
+                {false, "Самка"}
         };
     }
+
     @Test
     public void DoesHaveManeTest() throws Exception {
 
